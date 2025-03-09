@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess Who?</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="splash-screen">
+      <h1>Guess Who?</h1>
+      <div id="game-controls">
+        <button id="create-game">Create Game</button>
+        <button id="join-game">Join Game</button>
+      </div>
+      <div id="join-game-form" class="hidden">
+        <input
+          type="text"
+          id="game-code-input"
+          placeholder="XXX-XXX"
+          maxlength="7"
+        />
+        <div id="code-error" class="error-message"></div>
+        <button id="submit-code">Submit</button>
+        <button id="cancel-join">Cancel</button>
+      </div>
+      <div id="scrolling-gallery">
+        <div id="gallery-images"></div>
+      </div>
+    </div>
+
+    <div id="game-content" class="hidden">
+      <div id="mode-bar">
+        <button class="mode-btn active" data-mode="view">View</button>
+        <button class="mode-btn" data-mode="flip">Flip Down</button>
+        <button class="mode-btn" data-mode="highlight">Highlight</button>
+      </div>
+      <div id="toast">
+        <p id="toast-message"></p>
+      </div>
+
+      <h1>Guess Who?</h1>
+      <h2 id="game-code-display"></h2>
+
+      <div id="game-board"></div>
+
+      <div id="enlarged-view" class="hidden">
+        <img id="enlarged-img" src="" alt="Enlarged View" />
+        <div id="enlarged-info">
+          <p id="enlarged-text"></p>
+        </div>
+        <button id="close-enlarged">✖</button>
+      </div>
+
+      <div id="mystery-container">
+        <div id="mystery-person">
+          <p id="mystery-text"></p>
+          <img id="mystery-img" src="" alt="Mystery Person" />
+        </div>
+        <div id="mystery-toggle">
+          <span id="toggle-arrow">⬆</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
